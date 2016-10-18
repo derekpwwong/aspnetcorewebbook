@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using WebApplication1.Data;
 using WebApplication1.Models;
 using WebApplication1.Services;
+using MvcBook.Models;
 
 namespace WebApplication1
 {
@@ -83,6 +84,7 @@ namespace WebApplication1
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            SeedData.Initialize(app.ApplicationServices);
         }
     }
 }
