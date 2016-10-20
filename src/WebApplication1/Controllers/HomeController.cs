@@ -40,6 +40,7 @@ namespace WebApplication1.Controllers
         public IActionResult PostNotes()
         {
             ViewData["Message"] = "Your post notes page.";
+            ViewData["GetRecentNotes"] = getRecentNotes();
 
             return View();
         }
@@ -69,6 +70,11 @@ namespace WebApplication1.Controllers
         public IActionResult Error()
         {
             return View();
+        }
+        public string[] getRecentNotes()
+        {
+            //do something
+            return ["Introduction to Ruby on Rails", "Multithreading in Java", "Merge Sort Notes"];
         }
     }
 }
